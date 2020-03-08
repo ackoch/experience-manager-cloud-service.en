@@ -80,11 +80,11 @@ The recommended application deployment structure is as follows:
   For example, a complex deployment content package structure may look like this:
 
   + `all` content package embeds the following packages, to create a singular deployment artifact
-    + `ui.apps.common` deploys code required by **both** site A and site B
-    + `ui.apps.site-a` deploys code required by site A
-    + `ui.content.site-a` deploys content and configuration required by site A
-    + `ui.apps.site-b` deploys code required by site B
-    + `ui.content.site-b` deploys content and configuration required by site B
+    + `common/ui.apps` deploys code required by **both** site A and site B
+    + `site-a/ui.apps` deploys code required by site A
+    + `site-a/ui.content` deploys content and configuration required by site A
+    + `site-b/ui.apps` deploys code required by site B
+    + `site-b/ui.content` deploys content and configuration required by site B
 
 ## Package Types {#package-types}
 
