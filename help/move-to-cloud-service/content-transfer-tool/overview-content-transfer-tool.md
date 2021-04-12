@@ -55,8 +55,11 @@ Follow the section below to understand guidelines and best practices to use the 
 
 * Before running the Content Transfer Tool, you must ensure that there is enough disk space in the `crx-quickstart` subdirectory of the source AEM instance. This is because the Content Transfer Tool creates a local copy of the repository that is later uploaded to the migration set. 
    The general formula to calculate the require free disk space is as follows:
-   `data store size + node store size * 1.5`
+   `64 GB + node store size * 1.5`
 
-     * *data store size*: the Content Transfer Tool uses 64 GB, even if the actual data store is larger.
      * *node store size*: segment store directory size or the MongoDB database size.
-  Hence, for a segment store size of 20GB, the required free disk space would be 94GB.
+     * *data store*: the Content Transfer Tool uses 64 GB, no matter how large the actual data store is .
+     
+  Hence, for a segment store size of 20GB, the required free disk space would be 
+  
+  `64 GB + 20GB * 1.5 = 94GB`
